@@ -4,7 +4,8 @@ import mdx from '@astrojs/mdx';
 import AstroPWA from '@vite-pwa/astro';
 
 export default defineConfig({
-  site: 'https://ThatThadGuy.github.io/AshAboveAshBelow', // Replace with your details
+  site: 'https://ThatThadGuy.github.io/AshAboveAshBelow',
+  base: '/AshAboveAshBelow',
   integrations: [
     tailwind(),
     mdx(),
