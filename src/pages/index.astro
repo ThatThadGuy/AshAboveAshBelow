@@ -1,14 +1,23 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
-<BaseLayout title="Ash Above, Ash Below — Playtest Pack">
-  <section class="space-y-4">
-    <h1 class="text-3xl font-bold">Ash Above, Ash Below</h1>
-    <p class="text-lg">SRD + tools for fast playtests. 100% client-side, free to host.</p>
+<Layout title="Ash Above, Ash Below — Playtest Pack">
+  <section class="space-y-6">
+    <h1 class="text-4xl font-bold tracking-tight">Ash Above, Ash Below</h1>
+    <p class="text-lg opacity-80 max-w-2xl">Slim SRD and table tools for playtests. 100% client-side and free to host.</p>
     <div class="grid sm:grid-cols-3 gap-4">
-      <a class="border rounded-2xl p-4" href="/rules/_index">Read the Rules</a>
-      <a class="border rounded-2xl p-4" href="/tools/roller">Open Dice Roller</a>
-      <a class="border rounded-2xl p-4" href="/tools/sheet">Printable Character Sheet</a>
+      <a class="aab-card text-center" href={import.meta.env.BASE_URL + 'rules/_index'}>
+        <div class="text-lg font-semibold">Read the Rules</div>
+        <div class="text-sm opacity-70">Core loop, combat, conditions</div>
+      </a>
+      <a class="aab-card text-center" href={import.meta.env.BASE_URL + 'tools'}>
+        <div class="text-lg font-semibold">Tools</div>
+        <div class="text-sm opacity-70">Dice Roller & Sheet</div>
+      </a>
+      <a class="aab-card text-center" href={import.meta.env.BASE_URL + 'search'}>
+        <div class="text-lg font-semibold">Search</div>
+        <div class="text-sm opacity-70">Find anything fast</div>
+      </a>
     </div>
   </section>
-</BaseLayout>
+</Layout>
