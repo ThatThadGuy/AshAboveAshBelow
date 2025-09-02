@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout title="Tools | Ash Above, Ash Below">
+  <section class="space-y-6">
+    <h1 class="text-3xl font-bold tracking-tight">Tools</h1>
+    <p class="text-lg opacity-80 max-w-2xl">Dice roller and character sheet for your playtests.</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <a class="aab-card text-center" href={import.meta.env.BASE_URL + 'tools/roller'}>
+        <div class="text-lg font-semibold">Dice Roller</div>
+        <div class="text-sm opacity-70">Roll dice with advantage/disadvantage</div>
+      </a>
+      <a class="aab-card text-center" href={import.meta.env.BASE_URL + 'tools/sheet'}>
+        <div class="text-lg font-semibold">Character Sheet</div>
+        <div class="text-sm opacity-70">View and manage your character</div>
+      </a>
+    </div>
+  </section>
+</Layout>
