@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const pages = Object.values(import.meta.glob('./*.mdx', { eager: true }));
+---
+<Layout title="Rules">
+  <h1 class="text-2xl font-bold mb-4">Rules</h1>
+  <ul class="space-y-2">
+    {pages.map((p) => (
+      <li><a class="underline" href={p.url}>{p.frontmatter?.title ?? p.url}</a></li>
+    ))}
+  </ul>
+</Layout>
